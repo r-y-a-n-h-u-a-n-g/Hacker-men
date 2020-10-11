@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    font-family: 'Roboto', serif;
+    font-family: 'Verdana', sans-serif;
 }
 
 *{
@@ -16,7 +16,7 @@ body {
     left: -400px;
     width: 400px;
     height: 100%;
-    background: #042331;
+    background: #3d3d3d;
     transition: all .5s ease;
 }
 
@@ -25,7 +25,7 @@ body {
     color: white;
     padding-left: 50px;
     line-height: 70px;
-    background: #063146;
+    background: #3d3d3d;
     user-select: none; 
 }
 
@@ -38,13 +38,14 @@ body {
     color: white;
     padding-left: 20px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid black;
+    border-top: 0px solid rgba(255, 255, 255, .1);
+    border-bottom: 0px solid black;
     transition: 0.4s;
 }
 
 ul li:hover a{
     padding-left: 50px;
+    background: #666666;
 }
 
 .sidebar ul a i{
@@ -58,7 +59,7 @@ ul li:hover a{
 label #btn, label #cancel {
     position: absolute;
     cursor: pointer;
-    background: #042331;
+    background: #666666;
     border-radius: 3px;
 }
 
@@ -76,14 +77,23 @@ label #cancel{
     left: -340px;
     top: 17px;
     font-size: 30px;
-    color: #0a5275;
+    color: #ffffff;
     padding: 4px 9px;
     transition: all .5s ease;
+}
+
+#btn:hover{
+    background: #a0a0a0;
+}
+
+#cancel:hover{
+    background: #a0a0a0;
 }
 
 #check:checked ~ .sidebar{
     left: 0;
 }
+
 
 #check:checked ~ label #btn{
     left: 250px;
@@ -105,4 +115,35 @@ section{
     background-size: cover;
     height: 100vh;
     transition: all .5s;
+}
+
+
+.slide-down-page {
+    z-index: -1;
+    position: absolute;
+    margin-left: 0px;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    box-sizing: content-box;
+    background-color: #7d7d7d;
+    transition: opacity 250ms ease-in;
+}
+
+#check:checked ~ .slide-down-page {
+    width: 1920px;
+    margin-left: 0px;
+    opacity: 0.5;
+}
+
+
+.first-text-box {
+    position: absolute;
+    width: 1120px;
+    margin-left: 400px;
+    color: #fff;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 2px;
+    font-weight: 100;
 }
